@@ -8,7 +8,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-bricolage-grotesque);
   --font-mono: var(--font-geist-mono);
 }
 
@@ -19,8 +19,140 @@
   }
 }
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-bricolage-grotesque), Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+
+.css-ew8kg2-control {
+  min-height: 100% !important;
+}
+
+.select__control {
+  background-color: #fbfbfb !important;
+  border: 1px solid #d1d5dc !important;
+  border-radius: 0px !important;
+}
+.select__indicator-separator {
+  display: none !important;
+}
+.select__value-container {
+  padding: 10px 10px !important;
+}
+.error-class {
+  position: absolute;
+  margin-top: 0;
+  font-size: 12px;
+}
+/* .select__input-container{
+    margin: 0px!important;
+} */
+.select2.border-red-500 .select__control {
+  border-color: red !important;
+}
+.react-datepicker-wrapper {
+  width: 100%;
+}
+.special-label {
+  display: none !important;
+}
+.react-tel-input .form-control {
+  border-radius: 0px !important;
+}
+.react-tel-input .selected-flag .flag {
+  left: -20px !important;
+}
+.react-tel-input .flag-dropdown {
+  left: 12px !important;
+  border: none !important;
+  background-color: transparent !important;
+}
+.react-tel-input .selected-flag:hover, .react-tel-input .selected-flag:focus {
+  background-color: transparent !important;
+}
+.react-tel-input .flag-dropdown.open .country-list {
+  left: -40px !important;
+}
+.react-tel-input .flag-dropdown.open .selected-flag{
+  background-color: transparent !important;
+}
+/* Override react-select option highlight color */
+.react-select__control--is-focused {
+  border-color: #222 !important;
+}
+.react-select__option--is-selected:hover {
+  background-color: #222 !important;
+  color: #fff !important;
+}
+
+.css-ew8kg2-control {
+  min-height: 100% !important;
+}
+
+.select__control {
+  background-color: #fbfbfb !important;
+  border: 1px solid #d1d5dc !important;
+  border-radius: 0px !important;
+}
+.select__indicator-separator {
+  display: none !important;
+}
+.select__value-container {
+  padding: 10px 10px !important;
+}
+.error-class {
+  position: absolute;
+  margin-top: 0;
+  font-size: 12px;
+}
+/* .select__input-container{
+  margin: 0px!important;
+} */
+.select2.border-red-500 .select__control {
+  border-color: red !important;
+}
+.react-datepicker-wrapper {
+  width: 100%;
+}
+.react-tel-input .selected-flag {
+  font-weight: 300 !important;
+  padding: 0px !important;
+  left: 10px;
+}
+.react-select__value-container.css-hlgwow {
+  padding: 0px !important;
+}
+.react-select__control {
+  padding: 10px 0px !important;
 }
