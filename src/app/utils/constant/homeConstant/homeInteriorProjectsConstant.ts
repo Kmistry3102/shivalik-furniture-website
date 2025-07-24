@@ -13,12 +13,16 @@ export const homeInteriorProjectsData: HomeInteriorProjectsSection = {
       '/interiors/Residence-img2.png',
       '/interiors/Residence-img3.png',
       '/interiors/Residence-img4.png',
+      '/interiors/Residence-img5.png',
+      '/interiors/Residence-img6.png',
     ],
     retail: [
       '/interiors/Retail-img1.png',
       '/interiors/Retail-img2.png',
       '/interiors/Retail-img3.png',
       '/interiors/Retail-img4.png',
+      '/interiors/Retail-img5.png',
+      '/interiors/Retail-img6.png',
     ],
     commercial: [
       '/interiors/Commercial-img1.png',

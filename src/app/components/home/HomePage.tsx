@@ -13,6 +13,9 @@ import HomeMachinerySection from './HomeMachinerySection';
 import HomeLetsBuildTogetherSection from './HomeLetsBuildTogetherSection';
 import HomeOurClientsSection from './homeOurClientsSection';
 import HomeInteriorSolutionsSection from './HomeInteriorSolutionsSection';
+import HomeVideoHeroSection from './HomeVideoHeroSection';
+import HomeJoinTeamSection from './HomeJoinTeamSection';
+import HomePartnerSection from './HomePartnerSection';
 
 export default function HomePage() {
   return (
@@ -31,7 +34,9 @@ export default function HomePage() {
       <HomeFurnitureGenerationsSection />
       <HomeBrandSection />
       <HomeInteriorSolutionsSection />
-      
+      <HomeVideoHeroSection />
+      <HomeJoinTeamSection />
+      <HomePartnerSection />
     </div>
   );
 }

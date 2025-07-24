@@ -10,9 +10,9 @@ const Header = () => {
 
   const menuItems = [
     { name: 'Home', href: '/' },
-    { name: 'About', href: '/' },
-    { name: 'Career', href: '/' },
-    { name: 'Contact Us', href: '/' }
+    { name: 'About', href: '/about' },
+    { name: 'Career', href: '/careers' },
+    { name: 'Contact Us', href: '/contactus' }
   ];
 
   useEffect(() => {
@@ -40,7 +40,7 @@ const Header = () => {
               <Image 
                 src="/furniture_logo.png" 
                 alt="Shivalik Furniture" 
-                width={300} 
+                width={250} 
                 height={80} 
                 className={`transition-all duration-300 group-hover:scale-105 ${
                   isScrolled ? 'filter-none' : 'filter grayscale brightness-0 invert'

@@ -37,7 +37,7 @@ export default function HomeInteriorSolutionsSection() {
 
   return (
     <>
-      <section className="bg-white py-16 lg:py-24">
+      <section className="bg-white py-16 lg:py-24 interior-solutions-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Hero Section */}
           <div className="text-center mb-12">
@@ -78,7 +78,9 @@ export default function HomeInteriorSolutionsSection() {
               </div>
               {/* Contact Information */}
               <div className="space-y-4">
-                <h4 className="text-xl font-normal text-black">Contact Information</h4>
+                <h4 className="text-xl font-normal text-black">
+                  Contact Information
+                </h4>
                 <div className="space-y-4">
                   <div className="flex items-center gap-2">
                     <FiPhone className="w-6 h-6 text-black" />
@@ -119,49 +121,47 @@ export default function HomeInteriorSolutionsSection() {
               </div>
             </div>
             {/* Right Column - Contact Form */}
-            <div className="bg-[#fbfbfb] p-8 rounded-lg">
+            <div className="bg-[#fbfbfb] p-8 rounded">
               <h3 className="text-2xl font-normal text-black mb-6">
                 Get in Touch
               </h3>
               <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="space-y-6">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    {/* First Name */}
-                    <div>
-                      <input
-                        type="text"
-                        {...register("first_name", {
-                          required: "First name is required",
-                        })}
-                        placeholder="First Name"
-                        className={`w-full border-0 border-b font-light border-neutral-300 focus:border-black focus:ring-0 text-neutral-900 px-0 py-3 text-base bg-transparent placeholder-neutral-400 outline-none ${
-                          errors.first_name ? "border-red-500" : ""
-                        }`}
-                      />
-                      {errors.first_name && (
-                        <div className="mt-1 text-sm text-red-500">
-                          {errors.first_name.message as string}
-                        </div>
-                      )}
-                    </div>
-                    {/* Last Name */}
-                    <div>
-                      <input
-                        type="text"
-                        {...register("last_name", {
-                          required: "Last name is required",
-                        })}
-                        placeholder="Last Name"
-                        className={`w-full border-0 border-b font-light border-neutral-300 focus:border-black focus:ring-0 text-neutral-900 px-0 py-3 text-base bg-transparent placeholder-neutral-400 outline-none ${
-                          errors.last_name ? "border-red-500" : ""
-                        }`}
-                      />
-                      {errors.last_name && (
-                        <div className="mt-1 text-sm text-red-500">
-                          {errors.last_name.message as string}
-                        </div>
-                      )}
-                    </div>
+                  {/* First Name */}
+                  <div>
+                    <input
+                      type="text"
+                      {...register("first_name", {
+                        required: "First name is required",
+                      })}
+                      placeholder="First Name"
+                      className={`w-full border-0 border-b font-light border-neutral-300 focus:border-black focus:ring-0 text-neutral-900 px-0 py-3 text-base bg-transparent placeholder-neutral-400 outline-none ${
+                        errors.first_name ? "border-red-500" : ""
+                      }`}
+                    />
+                    {errors.first_name && (
+                      <div className="mt-1 text-sm text-red-500">
+                        {errors.first_name.message as string}
+                      </div>
+                    )}
+                  </div>
+                  {/* Last Name */}
+                  <div>
+                    <input
+                      type="text"
+                      {...register("last_name", {
+                        required: "Last name is required",
+                      })}
+                      placeholder="Last Name"
+                      className={`w-full border-0 border-b font-light border-neutral-300 focus:border-black focus:ring-0 text-neutral-900 px-0 py-3 text-base bg-transparent placeholder-neutral-400 outline-none ${
+                        errors.last_name ? "border-red-500" : ""
+                      }`}
+                    />
+                    {errors.last_name && (
+                      <div className="mt-1 text-sm text-red-500">
+                        {errors.last_name.message as string}
+                      </div>
+                    )}
                   </div>
                   {/* Phone with Country Code */}
                   <div>
@@ -185,7 +185,10 @@ export default function HomeInteriorSolutionsSection() {
                               "countryCode" in countryData &&
                               "dialCode" in countryData
                             ) {
-                              setValue("countryCode", "+" + countryData.dialCode);
+                              setValue(
+                                "countryCode",
+                                "+" + countryData.dialCode
+                              );
                             }
                           }}
                           inputProps={{
@@ -283,7 +286,7 @@ export default function HomeInteriorSolutionsSection() {
                     <textarea
                       {...register("message")}
                       placeholder="Your Message"
-                      rows={4}
+                      rows={3}
                       className="w-full border-0 border-b font-light border-neutral-300 focus:border-black focus:ring-0 text-neutral-900 px-0 py-3 text-base bg-transparent placeholder-neutral-400 outline-none resize-none"
                     ></textarea>
                   </div>
@@ -304,4 +307,4 @@ export default function HomeInteriorSolutionsSection() {
       <HomeInteriorProjectsSection />
     </>
   );
-} 
+}

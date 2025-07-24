@@ -59,19 +59,19 @@ export default function HomeBannerSection() {
         </div>
 
         {/* Content */}
-        <div className="relative z-20 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <div className="relative z-20 lg:text-center text-left px-8 max-w-7xl mx-auto">
           {/* Main Headline */}
-          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-light text-white tracking-wide  mb-6 leading-tight max-w-3xl mx-auto">
+          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-light text-white tracking-wide  mb-6 leading-tight mx-auto">
             Furniture That Moves With You
           </h1>
 
           {/* Sub-headline */}
-          <p className="text-lg sm:text-xl lg:text-2xl text-white tracking-wide font-light mb-12 max-w-3xl mx-auto">
+          <p className="text-xl md:text-xl lg:text-2xl text-white tracking-wide font-light lg:mb-12 mb-6 lg:max-w-3xl max-w-full mx-auto">
             Craftsmanship meets modern luxury
           </p>
 
           {/* Call-to-Action Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+          <div className="flex flex-col sm:flex-row lg:items-center lg:justify-center gap-4 sm:gap-6">
             {/* Explore Factory Button */}
             <button 
               onClick={() => {
@@ -80,7 +80,7 @@ export default function HomeBannerSection() {
                   element.scrollIntoView({ behavior: 'smooth' });
                 }
               }}
-              className="rounded text-lg group bg-white text-black px-8 py-3 border border-white font-light hover:bg-white/70 transition-all duration-300 flex items-center gap-2 min-w-[200px] justify-center shadow-lg hover:shadow-xl hover:scale-102 cursor-pointer"
+              className="w-fit rounded lg:text-lg text-base group bg-white text-black lg:px-8 px-4 lg:py-3 py-2 border border-white font-light hover:bg-white/70 transition-all duration-300 flex items-center gap-2 min-w-[200px] justify-center shadow-lg hover:shadow-xl hover:scale-102 cursor-pointer"
             >
               Explore Factory
               <BiChevronRight className="w-6 h-6" />
@@ -94,14 +94,14 @@ export default function HomeBannerSection() {
                   element.scrollIntoView({ behavior: 'smooth' });
                 }
               }}
-              className="rounded text-lg group bg-white/20 text-white border border-white px-8 py-3 font-light transition-all duration-500 flex items-center gap-2 min-w-[200px] justify-center shadow-lg hover:shadow-xl hover:bg-white hover:scale-102 hover:text-black cursor-pointer"
+              className="w-fit rounded lg:text-lg text-base group bg-white/20 text-white border border-white lg:px-8 px-4 lg:py-3 py-2 font-light transition-all duration-500 flex items-center gap-2 min-w-[200px] justify-center shadow-lg hover:shadow-xl hover:bg-white hover:scale-102 hover:text-black cursor-pointer"
             >
               Explore Collection
               <BiChevronRight className="w-6 h-6" />
             </button>
 
             {/* Explore Interiors Button */}
-            <button className="rounded text-lg group bg-white/20 text-white border border-white px-8 py-3 font-light transition-all duration-500 flex items-center gap-2 min-w-[200px] justify-center shadow-lg hover:shadow-xl hover:bg-white hover:scale-102 hover:text-black cursor-pointer">
+            <button className="w-fit rounded lg:text-lg text-base group bg-white/20 text-white border border-white lg:px-8 px-4 lg:py-3 py-2 font-light transition-all duration-500 flex items-center gap-2 min-w-[200px] justify-center shadow-lg hover:shadow-xl hover:bg-white hover:scale-102 hover:text-black cursor-pointer">
                 Explore Interiors
               <BiChevronRight className="w-6 h-6" />
             </button>

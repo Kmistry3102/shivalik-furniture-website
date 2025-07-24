@@ -93,42 +93,42 @@ const HomeLetsBuildTogetherSection = () => {
   return (
     <section
       id="lets-build-together-section"
-      className="lg:py-24 py-16 px-4 bg-white "
+      className="lg:py-24 py-16 bg-white "
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto px-8">
         {/* Header Section */}
-        <div className="text-center lg:mb-12 mb-8 lg:space-y-6 space-y-4">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light text-black leading-tight">
+        <div className="lg:text-center text-left lg:mb-12 mb-8 lg:space-y-6 space-y-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-6xl font-light text-black leading-tight">
             {letsBuildTogetherSectionData.title}
           </h2>
-          <p className="text-xl sm:text-2xl text-gray-600 font-light leading-relaxed">
+          <p className="text-lg sm:text-xl text-gray-600 font-light leading-relaxed lg:max-w-2xl">
             {letsBuildTogetherSectionData.subtitle}
           </p>
         </div>
 
         {/* Main Content - Two Columns */}
-        <div className="grid lg:grid-cols-2 gap-10 mt-24">
+        <div className="grid lg:grid-cols-2 gap-10 mt-0 lg:mt-24">
           {/* Left Column */}
           <div className="space-y-8">
             {/* Why Choose Section */}
             <div>
-              <h2 className="text-2xl font-normal text-black mb-6">
+              <h2 className="lg:text-2xl text-xl font-normal text-black mb-6">
                 {letsBuildTogetherSectionData.whyChooseTitle}
               </h2>
-              <div className="lg:space-y-6 space-y-4 lg:my-10 my-6">
+              <div className="lg:space-y-6 space-y-6 lg:my-10 my-6">
                 {letsBuildTogetherSectionData.whyChooseItems.map(
                   (item, index) => {
                     const IconComponent = item.icon;
                     return (
-                      <div key={index} className="flex items-start space-x-4">
+                      <div key={index} className="flex items-start lg:space-x-4 space-x-2">
                         <div className="text-2xl flex-shrink-0 text-black">
-                          <IconComponent className="w-7 h-7"/>
+                          <IconComponent className="w-6 h-6 lg:w-7 lg:h-7"/>
                         </div>
-                        <div className="space-y-2">
-                          <h3 className="font-normal text-xl text-black">
+                        <div className="lg:space-y-2 space-y-1">
+                          <h3 className="font-normal text-lg lg:text-xl text-black">
                             {item.title}
                           </h3>
-                          <p className="text-gray-600 text-lg">
+                          <p className="text-gray-600 lg:text-lg text-base">
                             {item.description}
                           </p>
                         </div>
@@ -140,8 +140,8 @@ const HomeLetsBuildTogetherSection = () => {
             </div>
 
             {/* Resources Section */}
-            <div className="bg-[#fbfbfb] rounded-lg hover:bg-gray-100 transition-colors duration-200 p-6">
-              <h2 className="text-2xl font-normal text-black mb-6">
+            <div className="bg-[#fbfbfb] rounded hover:bg-gray-100 transition-colors duration-200 p-6">
+              <h2 className="lg:text-2xl text-xl font-normal text-black mb-6">
                 {letsBuildTogetherSectionData.resourcesTitle}
               </h2>
               <div className="space-y-4">
@@ -163,13 +163,13 @@ const HomeLetsBuildTogetherSection = () => {
                               }
                             }
                           }}
-                          className="flex items-center justify-between w-full p-3 rounded cursor-pointer border border-gray-200 bg-white hover:scale-102 transition duration-400"
+                          className="flex items-center lg:justify-between w-full lg:p-3 p-2 rounded cursor-pointer border border-gray-200 bg-white hover:scale-102 transition duration-400"
                         >
                           <div className="flex items-center space-x-3">
                             <span className="text-2xl text-black">
                               <IconComponent />
                             </span>
-                            <span className="font-normal text-black">
+                            <span className="font-normal lg:text-base text-sm text-left text-black">
                               {item.title}
                             </span>
                           </div>
@@ -185,8 +185,8 @@ const HomeLetsBuildTogetherSection = () => {
           </div>
 
           {/* Right Column - Form */}
-          <div className="bg-[#fbfbfb] p-8 rounded-lg">
-            <h2 className="text-2xl font-normal text-black mb-6">
+          <div className="bg-[#fbfbfb] p-6 lg:p-8 rounded">
+            <h2 className="lg:text-2xl text-xl font-normal text-black mb-6">
               {letsBuildTogetherSectionData.formTitle}
             </h2>
 
@@ -402,7 +402,7 @@ const HomeLetsBuildTogetherSection = () => {
                 <div>
                   <textarea
                     {...register("projectDetails")}
-                    rows={4}
+                    rows={3}
                     className="w-full border-0 border-b border-neutral-300 focus:border-black focus:ring-0 text-neutral-900 px-0 py-4 text-base bg-transparent placeholder-neutral-400 outline-none resize-none"
                     placeholder="Project Details & Requirements"
                   />

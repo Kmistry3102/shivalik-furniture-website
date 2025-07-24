@@ -24,14 +24,14 @@ export default function HomeSellFurnitureSection() {
   };
 
   return (
-    <section className="bg-black lg:py-24 py-16 relative lg:my-12 my-8">
+    <section className="bg-black lg:py-24 py-16 relative lg:my-12 my-3">
       {/* Background Pattern */}
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-8 relative z-10">
         {/* Main Content */}
-        <div className="text-center lg:space-y-8 space-y-4">
+        <div className="lg:text-center text-left lg:space-y-8 space-y-4">
           {/* Main Heading */}
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light text-white leading-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-6xl font-light text-white leading-tight hidden lg:block">
             {sellFurnitureSectionData.mainHeading
               .split("\n")
               .map((line, index) => (
@@ -43,14 +43,17 @@ export default function HomeSellFurnitureSection() {
                 </React.Fragment>
               ))}
           </h2>
+          <h2 className="text-3xl md:text-4xl lg:text-6xl font-light text-white leading-tight block lg:hidden">
+            {sellFurnitureSectionData.mainHeading}
+          </h2>
 
           {/* Subtitle */}
-          <p className="text-xl sm:text-2xl text-gray-100 font-light leading-relaxed lg:max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl lg:text-2xl text-gray-100 font-light leading-relaxed lg:max-w-2xl mx-auto">
             {sellFurnitureSectionData.subtitle}
           </p>
 
           {/* Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+          <div className="flex flex-col sm:flex-row lg:gap-6 gap-4 justify-center lg:mb-16 mb-10">
             {sellFurnitureSectionData.buttons.map((button) => {
               const IconComponent =
                 button.icon === "factory" ? HiOutlineBuildingOffice2 : FaHandshake;
@@ -58,7 +61,7 @@ export default function HomeSellFurnitureSection() {
                 <button
                   key={button.id}
                   className={`
-                    flex items-center justify-center gap-2 px-8 py-3 rounded font-light text-lg transition-all duration-500 transform hover:scale-105
+                    flex items-center justify-center lg:gap-2 gap-1 lg:px-8 px-4 lg:py-3 py-2 rounded font-light lg:text-lg text-base w-fit transition-all duration-500 transform hover:scale-105
                     ${
                       button.variant === "primary"
                         ? "bg-white text-black border-1 border-white hover:bg-white/80 cursor-pointer"
@@ -82,7 +85,7 @@ export default function HomeSellFurnitureSection() {
           </div>
 
           {/* Feature Cards */}
-          <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+          <div className="grid lg:grid-cols-2 grid-cols-1 gap-6 max-w-3xl mx-auto">
             {sellFurnitureSectionData.featureCards.map((card) => {
               const IconComponent =
                 card.icon === "factory" ? FaIndustry : FaAward;
@@ -91,12 +94,12 @@ export default function HomeSellFurnitureSection() {
                   key={card.id}
                   className="bg-white/10 rounded lg:p-8 p-6 border-1 border-white/20 transition-all duration-300 hover:scale-102"
                 >
-                  <div className="text-center">
-                    <IconComponent className="text-4xl mb-4 mx-auto text-white " />
-                    <h3 className="text-xl text-white mb-2 font-normal">
+                  <div className="lg:text-center text-left">
+                    <IconComponent className="lg:text-4xl text-2xl mb-4 lg:mx-auto mx-0 text-white " />
+                    <h3 className="lg:text-xl text-lg text-white mb-2 font-normal">
                       {card.title}
                     </h3>
-                    <p className="text-white/80 font-light text-lg">
+                    <p className="text-white/80 font-light lg:text-lg text-base">
                       {card.description}
                     </p>
                   </div>

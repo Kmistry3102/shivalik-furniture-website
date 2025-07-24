@@ -40,20 +40,20 @@ export default function HomeBrandSection() {
   };
 
   return (
-    <section id="brand-section" className="bg-white py-16 lg:py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="brand-section" className="bg-white py-16 lg:py-24 brand-section">
+      <div className="max-w-7xl mx-auto px-8">
         {/* Header Section */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light text-black leading-tight">
+        <div className="lg:text-center text-left lg:mb-12 mb-8 lg:space-y-4 space-y-2">
+          <h2 className="text-3xl sm:text-4xl lg:text-6xl font-light text-black leading-tight">
             Shivalik Furniture
           </h2>
-          <p className="text-xl sm:text-2xl text-gray-600 font-light leading-relaxed">
+          <p className="text-lg sm:text-xl text-gray-600 font-light leading-relaxed">
             Discover our curated collection of premium furniture brands.
           </p>
         </div>
 
         {/* Navigation Bar */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center lg:gap-4 gap-2 mb-12 overflow-x-auto scrollbar-hide">
           {brandSectionsData.map((brand) => (
             <button
               key={brand.id}
@@ -181,50 +181,48 @@ export default function HomeBrandSection() {
           </div>
 
           {/* Right Column - Contact Form */}
-          <div className="bg-[#fbfbfb] p-8 rounded-lg">
+          <div className="bg-[#fbfbfb] p-8 rounded">
             <h3 className="text-2xl font-normal text-black mb-6">
               {currentBrand.formTitle}
             </h3>
 
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className="space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  {/* First Name */}
-                  <div>
-                    <input
-                      type="text"
-                      {...register("first_name", {
-                        required: "First name is required",
-                      })}
-                      placeholder={currentBrand.formFields.first_name}
-                      className={`w-full border-0 border-b font-light border-neutral-300 focus:border-black focus:ring-0 text-neutral-900 px-0 py-3 text-base bg-transparent placeholder-neutral-400 outline-none ${
-                        errors.first_name ? "border-red-500" : ""
-                      }`}
-                    />
-                    {errors.first_name && (
-                      <div className="mt-1 text-sm text-red-500">
-                        {errors.first_name.message as string}
-                      </div>
-                    )}
-                  </div>
-                  {/* Last Name */}
-                  <div>
-                    <input
-                      type="text"
-                      {...register("last_name", {
-                        required: "Last name is required",
-                      })}
-                      placeholder={currentBrand.formFields.last_name}
-                      className={`w-full border-0 border-b font-light border-neutral-300 focus:border-black focus:ring-0 text-neutral-900 px-0 py-3 text-base bg-transparent placeholder-neutral-400 outline-none ${
-                        errors.last_name ? "border-red-500" : ""
-                      }`}
-                    />
-                    {errors.last_name && (
-                      <div className="mt-1 text-sm text-red-500">
-                        {errors.last_name.message as string}
-                      </div>
-                    )}
-                  </div>
+                {/* First Name */}
+                <div>
+                  <input
+                    type="text"
+                    {...register("first_name", {
+                      required: "First name is required",
+                    })}
+                    placeholder={currentBrand.formFields.first_name}
+                    className={`w-full border-0 border-b font-light border-neutral-300 focus:border-black focus:ring-0 text-neutral-900 px-0 py-3 text-base bg-transparent placeholder-neutral-400 outline-none ${
+                      errors.first_name ? "border-red-500" : ""
+                    }`}
+                  />
+                  {errors.first_name && (
+                    <div className="mt-1 text-sm text-red-500">
+                      {errors.first_name.message as string}
+                    </div>
+                  )}
+                </div>
+                {/* Last Name */}
+                <div>
+                  <input
+                    type="text"
+                    {...register("last_name", {
+                      required: "Last name is required",
+                    })}
+                    placeholder={currentBrand.formFields.last_name}
+                    className={`w-full border-0 border-b font-light border-neutral-300 focus:border-black focus:ring-0 text-neutral-900 px-0 py-3 text-base bg-transparent placeholder-neutral-400 outline-none ${
+                      errors.last_name ? "border-red-500" : ""
+                    }`}
+                  />
+                  {errors.last_name && (
+                    <div className="mt-1 text-sm text-red-500">
+                      {errors.last_name.message as string}
+                    </div>
+                  )}
                 </div>
 
                 {/* Phone with Country Code */}
@@ -348,7 +346,7 @@ export default function HomeBrandSection() {
                   <textarea
                     {...register("message")}
                     placeholder={currentBrand.formFields.message}
-                    rows={4}
+                    rows={3}
                     className="w-full border-0 border-b font-light border-neutral-300 focus:border-black focus:ring-0 text-neutral-900 px-0 py-3 text-base bg-transparent placeholder-neutral-400 outline-none resize-none"
                   ></textarea>
                 </div>

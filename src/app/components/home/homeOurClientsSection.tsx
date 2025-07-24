@@ -27,14 +27,14 @@ const clientLogos = [
 
 export default function HomeOurClientsSection() {
   return (
-    <section className="bg-white py-16 lg:py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="bg-white py-10 lg:py-24">
+      <div className="max-w-7xl mx-auto px-8">
         {/* Section Header */}
-        <div className="text-center mb-6 space-y-4">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light text-black leading-tight">
+        <div className="lg:text-center text-left lg:mb-12 mb-8 lg:space-y-4 space-y-2">
+          <h2 className="text-3xl sm:text-4xl lg:text-6xl font-light text-black leading-tight">
            Our Clients
           </h2>
-          <p className="text-xl sm:text-2xl text-gray-600 font-light leading-relaxed">
+          <p className="text-lg sm:text-xl text-gray-600 font-light leading-relaxed">
             Trusted by India's leading corporations and enterprises
           </p>
         </div>
@@ -43,8 +43,8 @@ export default function HomeOurClientsSection() {
         <div className="relative">
           <Swiper
             modules={[Autoplay]}
-            spaceBetween={30}
-            slidesPerView={2}
+            spaceBetween={15}
+            slidesPerView={3}
             loop={true}
             autoplay={{
               delay: 0,
